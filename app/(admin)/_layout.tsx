@@ -4,7 +4,7 @@ import {HeaderOptions} from "@react-navigation/elements";
 import {BottomTabNavigationOptions} from "@react-navigation/bottom-tabs";
 import {StatusBar} from "react-native";
 
-export default function TabsLayout() {
+export default function AdminLayout() {
 
     const options: HeaderOptions & BottomTabNavigationOptions = {
         headerShown: false
@@ -14,16 +14,16 @@ export default function TabsLayout() {
         <>
             <StatusBar backgroundColor="transparent" barStyle="dark-content" />
             <Tabs
-                tabBar={(props) => <TabBar {...props} />}
+                tabBar={(props) => <TabBar {...props} admin={true} />}
                 screenOptions={{
                     headerShown: false
                 }}
             >
                 {/*<Tabs.Screen name="home" />*/}
-                <Tabs.Screen name="adopt" />
-                <Tabs.Screen name="mutual" />
-                <Tabs.Screen name="donate" />
-                <Tabs.Screen name="veterinary" />
+                <Tabs.Screen name="pets" />
+                <Tabs.Screen name="adopted" />
+                <Tabs.Screen name="users" />
+                <Tabs.Screen name="requests" />
             </Tabs>
         </>
     )
